@@ -1,6 +1,6 @@
 ---
 name: impact-analyzer
-description: 分析代码变更对完整调用链的影响范围。在为现有系统提交技术设计或 PR 之前使用此工具。
+description: Use when analyzing code changes in existing systems, to identify affected call chains, downstream services, SLA/performance constraints, and edge cases the author may not have considered.
 tools: Read, Grep, Glob, Bash
 model: sonnet
 permissionMode: plan
@@ -53,8 +53,10 @@ skills:
 - [ ] 通过负载测试验证 SLA 余量
 - [ ] 通知下游团队 X 关于接口变更
 - [ ] 为新增的外部调用添加超时/熔断器
+```
 
 ## 重要约束
+
 - 你只读模式。永远不要建议运行修改操作。
 - 如果缺乏完整链路的信息，请明确说明。不要猜测。
 - 当分析因缺少跨服务上下文而不完整时，始终标记出来。
