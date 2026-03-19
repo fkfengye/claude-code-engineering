@@ -1,59 +1,59 @@
 ---
-description: Create a pull request with auto-detected context
-argument-hint: [title] [description]
+description: 创建 Pull Request，自动检测上下文
+argument-hint: [标题] [描述]
 allowed-tools: Bash(git:*), Bash(gh:*)
 ---
 
-Create a pull request.
+创建一个 Pull Request。
 
-Title: $1
-Description: $2
+标题：$1
+描述：$2
 
-## Current Context (Auto-detected)
+## 当前上下文（自动检测）
 
-Current branch:
+当前分支：
 !`git branch --show-current`
 
-Recent commits on this branch:
-!`git log origin/main..HEAD --oneline 2>/dev/null || echo "No commits ahead of main"`
+此分支上的最近提交：
+!`git log origin/main..HEAD --oneline 2>/dev/null || echo "没有领先于 main 的提交"`
 
-Files changed:
+变更的文件：
 !`git diff --stat origin/main 2>/dev/null || git diff --stat HEAD~3`
 
-## Steps
+## 操作步骤
 
-1. Ensure we're not on main/master branch
-2. Push current branch to remote (if not already)
-3. Create PR using `gh pr create`:
-   - Title: $1 (or auto-generate from branch name)
-   - Body: $2 (or auto-generate from commits)
-4. Return the PR URL
+1. 确保不在 main/master 分支上
+2. 将当前分支推送到远程（如果还没有）
+3. 使用 `gh pr create` 创建 PR：
+   - 标题：$1（或根据分支名自动生成）
+   - 正文：$2（或根据提交自动生成）
+4. 返回 PR URL
 
-## PR Body Template
+## PR 正文模板
 
-If $2 is not provided, generate:
+如果未提供 $2，则自动生成：
 
 ```markdown
-## Summary
-[Auto-generated from commit messages]
+## 概述
+[根据提交信息自动生成]
 
-## Changes
-[List of changed files with brief descriptions]
+## 变更内容
+[变更文件列表及简要说明]
 
-## Testing
-- [ ] Tests pass locally
-- [ ] Manual testing completed
+## 测试
+- [ ] 本地测试通过
+- [ ] 手动测试完成
 
 ---
-Created with `/pr-create`
+由 `/pr-create` 创建
 ```
 
-## Output
+## 输出
 
 ```
-✓ PR Created: [URL]
+✓ PR 已创建：[URL]
 
-Title: [title]
-Branch: [branch] → main
-Changes: [n] files
+标题：[标题]
+分支：[分支] → main
+变更：[n] 个文件
 ```

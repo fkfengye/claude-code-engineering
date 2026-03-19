@@ -1,77 +1,77 @@
 ---
-description: Deep analysis of code against project standards
-argument-hint: [file or directory path]
+description: 深度分析代码是否符合项目规范
+argument-hint: [文件或目录路径]
 allowed-tools: Read, Grep, Glob
 ---
 
-Perform deep analysis on: $ARGUMENTS
+对以下目标进行深度分析：$ARGUMENTS
 
-## Analysis Context
+## 分析上下文
 
-Use our project's coding standards as reference:
+使用我们项目的编码规范作为参考：
 @.claude/rules/coding-standards.md
 
-## Analysis Dimensions
+## 分析维度
 
-### 1. Code Quality
-- Complexity (cyclomatic, cognitive)
-- Duplication
-- Dead code
-- Naming conventions
+### 1. 代码质量
+- 复杂度（圈复杂度、认知复杂度）
+- 代码重复
+- 死代码
+- 命名规范
 
-### 2. Architecture
-- Separation of concerns
-- Dependency direction
-- Module boundaries
+### 2. 架构
+- 关注点分离
+- 依赖方向
+- 模块边界
 
-### 3. Security
-- Input validation
-- Authentication/authorization
-- Sensitive data handling
+### 3. 安全
+- 输入验证
+- 认证/授权
+- 敏感数据处理
 
-### 4. Performance
-- Obvious inefficiencies
-- Resource management
-- Caching opportunities
+### 4. 性能
+- 明显低效的地方
+- 资源管理
+- 缓存优化点
 
-### 5. Maintainability
-- Documentation coverage
-- Test coverage indicators
-- Code readability
+### 5. 可维护性
+- 文档覆盖率
+- 测试覆盖率指标
+- 代码可读性
 
-## Steps
+## 分析步骤
 
-1. Read the target file(s)
-2. If a directory, identify key files
-3. Analyze against each dimension
-4. Compare with project standards (if available)
-5. Generate report
+1. 读取目标文件
+2. 如果是目录，识别关键文件
+3. 按照每个维度进行分析
+4. 与项目规范进行对比（如果有）
+5. 生成报告
 
-## Output Format
+## 输出格式
 
 ```markdown
-## Analysis Report: [target]
+## 分析报告：[目标]
 
-### Overview
-[One paragraph summary]
+### 概述
+[一段总结]
 
-### Scores
-| Dimension | Score | Notes |
-|-----------|-------|-------|
-| Quality | ⭐⭐⭐⭐☆ | [brief] |
-| Architecture | ⭐⭐⭐☆☆ | [brief] |
-| Security | ⭐⭐⭐⭐⭐ | [brief] |
-| Performance | ⭐⭐⭐☆☆ | [brief] |
-| Maintainability | ⭐⭐⭐⭐☆ | [brief] |
+### 评分
+| 维度 | 评分 | 备注 |
+|---------|-------|-------|
+| 质量 | ⭐⭐⭐⭐☆ | [简述] |
+| 架构 | ⭐⭐⭐☆☆ | [简述] |
+| 安全 | ⭐⭐⭐⭐⭐ | [简述] |
+| 性能 | ⭐⭐⭐☆☆ | [简述] |
+| 可维护性 | ⭐⭐⭐⭐☆ | [简述] |
 
-### Key Findings
+### 关键发现
 
-#### Strengths
-- [positive points]
+#### 优点
+- [优点列表]
 
-#### Areas for Improvement
-- [issues with suggested fixes]
+#### 改进点
+- [问题及修复建议]
 
-### Recommendations
-1. [Prioritized action items]
+### 建议
+1. [优先级排序的操作项]
 ```
