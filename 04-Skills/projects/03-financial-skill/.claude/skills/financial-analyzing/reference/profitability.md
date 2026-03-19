@@ -1,82 +1,82 @@
-# Profitability Analysis Reference
+# 盈利能力分析参考
 
-## Margin Metrics
+## 利润率指标
 
-### Gross Profit Margin
+### 毛利率
 ```
-Gross Margin = (Revenue - Cost of Goods Sold) / Revenue × 100%
+毛利率 = (收入 - 营业成本) / 收入 × 100%
 ```
 
-**Industry Benchmarks:**
-| Industry | Typical Range |
+**行业基准：**
+| 行业 | 典型区间 |
 |----------|--------------|
-| Software/SaaS | 70-85% |
-| Retail | 20-50% |
-| Manufacturing | 25-35% |
-| Services | 50-70% |
+| 软件/SaaS | 70-85% |
+| 零售 | 20-50% |
+| 制造业 | 25-35% |
+| 服务业 | 50-70% |
 
-### Operating Profit Margin
+### 营业利润率
 ```
-Operating Margin = Operating Income / Revenue × 100%
+营业利润率 = 营业收入 / 收入 × 100%
 
-Operating Income = Revenue - COGS - Operating Expenses
-```
-
-### Net Profit Margin
-```
-Net Margin = Net Income / Revenue × 100%
-
-Net Income = Revenue - All Expenses - Taxes
+营业收入 = 收入 - COGS - 运营费用
 ```
 
-### EBITDA Margin
+### 净利率
 ```
-EBITDA Margin = EBITDA / Revenue × 100%
+净利率 = 净利润 / 收入 × 100%
 
-EBITDA = Net Income + Interest + Taxes + Depreciation + Amortization
-```
-
-## Return Metrics
-
-### Return on Investment (ROI)
-```
-ROI = (Gain from Investment - Cost of Investment) / Cost of Investment × 100%
+净利润 = 收入 - 所有费用 - 税费
 ```
 
-### Return on Assets (ROA)
+### EBITDA 利润率
 ```
-ROA = Net Income / Total Assets × 100%
-```
+EBITDA 利润率 = EBITDA / 收入 × 100%
 
-**Benchmarks:**
-- > 10%: Excellent
-- 5-10%: Good
-- < 5%: Below average
-
-### Return on Equity (ROE)
-```
-ROE = Net Income / Shareholders' Equity × 100%
+EBITDA = 净利润 + 利息 + 税费 + 折旧 + 摊销
 ```
 
-**Benchmarks:**
-- > 15%: Excellent
-- 10-15%: Good
-- < 10%: Below average
+## 回报率指标
 
-### DuPont Analysis (ROE Decomposition)
+### 投资回报率 (ROI)
 ```
-ROE = Net Margin × Asset Turnover × Equity Multiplier
-
-Where:
-- Net Margin = Net Income / Revenue
-- Asset Turnover = Revenue / Total Assets
-- Equity Multiplier = Total Assets / Shareholders' Equity
+ROI = (投资收益 - 投资成本) / 投资成本 × 100%
 ```
 
-## Profitability Red Flags
+### 资产回报率 (ROA)
+```
+ROA = 净利润 / 总资产 × 100%
+```
 
-1. **Gross margin declining** while revenue grows (pricing pressure)
-2. **Operating margin < 0** (not operationally profitable)
-3. **ROE significantly higher than ROA** (high leverage risk)
-4. **Net margin < industry average** for 3+ years
-5. **EBITDA positive but Net Income negative** (high interest/depreciation burden)
+**基准：**
+- > 10%：优秀
+- 5-10%：良好
+- < 5%：低于平均
+
+### 股东权益回报率 (ROE)
+```
+ROE = 净利润 / 股东权益 × 100%
+```
+
+**基准：**
+- > 15%：优秀
+- 10-15%：良好
+- < 10%：低于平均
+
+### 杜邦分析（ROE 分解）
+```
+ROE = 净利率 × 资产周转率 × 权益乘数
+
+其中：
+- 净利率 = 净利润 / 收入
+- 资产周转率 = 收入 / 总资产
+- 权益乘数 = 总资产 / 股东权益
+```
+
+## 盈利能力警示信号
+
+1. **收入增长但毛利率下降**（定价压力）
+2. **营业利润率 < 0**（运营不盈利）
+3. **ROE 远高于 ROA**（高杠杆风险）
+4. **净利率连续 3 年以上低于行业平均**
+5. **EBITDA 为正但净利润为负**（高利息/折旧负担）

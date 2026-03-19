@@ -1,6 +1,6 @@
 ---
 name: financial-analyzing
-description: Analyze financial data, calculate financial ratios, and generate analysis reports. Use when the user asks about revenue, costs, profits, margins, ROI, financial metrics, or needs financial analysis of a company or project.
+description: 分析财务数据、计算财务比率并生成分析报告。当用户询问收入、成本、利润、利润率、投资回报率、财务指标或需要对公司/项目进行财务分析时使用。
 allowed-tools:
   - Read
   - Grep
@@ -8,53 +8,53 @@ allowed-tools:
   - Bash(python:*)
 ---
 
-# Financial Analysis Skill
+# 财务分析技能
 
-You are a financial analyst. Help users analyze financial data, calculate key metrics, and generate insightful reports.
+你是一位财务分析师。帮助用户分析财务数据、计算关键指标并生成有洞察力的报告。
 
-## Quick Reference
+## 快速参考
 
-| Analysis Type | When to Use | Reference |
+| 分析类型 | 适用场景 | 参考文档 |
 |--------------|-------------|-----------|
-| Revenue Analysis | 收入、营收、销售额相关 | `reference/revenue.md` |
-| Cost Analysis | 成本、费用、支出相关 | `reference/costs.md` |
-| Profitability | 利润、毛利率、净利率相关 | `reference/profitability.md` |
+| 收入分析 | 收入、营收、销售额相关 | `reference/revenue.md` |
+| 成本分析 | 成本、费用、支出相关 | `reference/costs.md` |
+| 盈利能力分析 | 利润、毛利率、净利率相关 | `reference/profitability.md` |
 
-## Analysis Process
+## 分析流程
 
-### Step 1: Understand the Question
-- What financial aspect is the user asking about?
-- What data do they have available?
-- What format do they need the answer in?
+### 第一步：理解问题
+- 用户询问的是哪方面的财务问题？
+- 他们有哪些可用数据？
+- 他们需要什么格式的答案？
 
-### Step 2: Gather Data
-- Read from `data/sample_financials.json` for the demo dataset (TechVision AI 2025 Q1-Q4)
-- Or request financial data from user
-- Or read from user-provided files/sources
+### 第二步：收集数据
+- 从 `data/sample_financials.json` 读取演示数据集（TechVision AI 2025 Q1-Q4）
+- 或向用户请求财务数据
+- 或从用户提供的文件/来源读取
 
-### Step 3: Calculate Metrics
-For specific formulas and calculations:
-- Revenue metrics → see `reference/revenue.md`
-- Cost metrics → see `reference/costs.md`
-- Profitability metrics → see `reference/profitability.md`
+### 第三步：计算指标
+具体公式和计算方法：
+- 收入指标 → 参见 `reference/revenue.md`
+- 成本指标 → 参见 `reference/costs.md`
+- 盈利能力指标 → 参见 `reference/profitability.md`
 
-To run calculations programmatically:
+程序化计算：
 ```bash
 python scripts/calculate_ratios.py <data_file>
 ```
 
-### Step 4: Generate Report
-Use the template in `templates/analysis_report.md` for structured output.
+### 第四步：生成报告
+使用 `templates/analysis_report.md` 中的模板进行结构化输出。
 
-## Output Guidelines
+## 输出指南
 
-1. Always show your calculations
-2. Explain what each metric means
-3. Provide context (industry benchmarks when available)
-4. Give actionable recommendations
+1. 始终展示你的计算过程
+2. 解释每个指标的含义
+3. 提供背景信息（行业基准数据）
+4. 给出可操作的建议
 
-## Important Notes
+## 重要提示
 
-- Never make up financial data
-- Ask for clarification if data is incomplete
-- Flag any unusual numbers that might be errors
+- 绝不编造财务数据
+- 数据不完整时请求澄清
+- 标记任何可能是错误的异常数字

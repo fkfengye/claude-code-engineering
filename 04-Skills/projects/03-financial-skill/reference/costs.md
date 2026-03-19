@@ -1,68 +1,68 @@
-# Cost Analysis Reference
+# 成本分析参考
 
-## Cost Categories
+## 成本分类
 
-### Cost of Goods Sold (COGS)
-Direct costs attributable to the production of goods sold.
+### 营业成本 (COGS)
+直接归因于已售商品生产的成本。
 
 ```
-COGS = Beginning Inventory + Purchases - Ending Inventory
+COGS = 期初存货 + 采购 - 期末存货
 ```
 
-Components:
-- Raw materials
-- Direct labor
-- Manufacturing overhead
+组成部分：
+- 原材料
+- 直接人工
+- 制造费用
 
-### Operating Expenses (OPEX)
-Ongoing costs for running a business.
+### 运营费用 (OPEX)
+企业运营的持续成本。
 
-Categories:
-- **Sales & Marketing**: Advertising, sales commissions, marketing staff
-- **General & Administrative**: Office rent, utilities, administrative staff
-- **Research & Development**: Product development, engineering
+分类：
+- **销售与营销**：广告、销售佣金、营销人员
+- **管理费用**：办公室租金、水电费、行政人员
+- **研发**：产品开发、工程
 
-## Cost Metrics
+## 成本指标
 
-### Cost Ratio
+### 成本比率
 ```
-Cost Ratio = Total Costs / Revenue × 100%
-```
-
-### Cost per Unit
-```
-Cost per Unit = Total Production Cost / Units Produced
+成本比率 = 总成本 / 收入 × 100%
 ```
 
-### Customer Acquisition Cost (CAC)
+### 单位成本
 ```
-CAC = Total Sales & Marketing Spend / Number of New Customers
-```
-
-### Lifetime Value to CAC Ratio (LTV:CAC)
-```
-LTV:CAC = Customer Lifetime Value / Customer Acquisition Cost
+单位成本 = 总生产成本 / 产量
 ```
 
-**Benchmarks:**
-- LTV:CAC > 3:1 = Healthy
-- LTV:CAC < 1:1 = Losing money on customers
-
-## Cost Efficiency Metrics
-
-### Operating Expense Ratio
+### 客户获取成本 (CAC)
 ```
-OPEX Ratio = Operating Expenses / Revenue × 100%
+CAC = 销售与营销总支出 / 新客户数量
 ```
 
-### Sales Efficiency
+### 客户终身价值与获取成本比率 (LTV:CAC)
 ```
-Sales Efficiency = New ARR / Sales & Marketing Spend
+LTV:CAC = 客户终身价值 / 客户获取成本
 ```
 
-## Red Flags
+**基准：**
+- LTV:CAC > 3:1 = 健康
+- LTV:CAC < 1:1 = 客户亏损
 
-1. **COGS growing faster than revenue** (margin compression)
-2. **CAC > LTV** (unsustainable growth)
-3. **OPEX ratio increasing** while revenue flat
-4. **Inventory costs rising** without corresponding sales
+## 成本效率指标
+
+### 运营费用比率
+```
+OPEX 比率 = 运营费用 / 收入 × 100%
+```
+
+### 销售效率
+```
+销售效率 = 新增 ARR / 销售与营销支出
+```
+
+## 警示信号
+
+1. **COGS 增速超过收入**（利润率压缩）
+2. **CAC > LTV**（不可持续增长）
+3. **OPEX 比率上升**而收入持平
+4. **库存成本上升**但无相应销售增长

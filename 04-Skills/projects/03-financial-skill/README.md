@@ -1,44 +1,44 @@
-# Financial Analysis Skill
+# 财务分析技能
 
-A progressive disclosure skill for financial analysis, demonstrating the three-layer architecture.
+一个用于财务分析的分层展示技能，展示了三层架构。
 
-## Structure
+## 结构
 
 ```
 03-financial-skill/
-├── SKILL.md                    # Main skill file (always loaded)
+├── SKILL.md                    # 主技能文件（始终加载）
 ├── reference/
-│   ├── revenue.md             # Revenue analysis formulas
-│   ├── costs.md               # Cost analysis formulas
-│   └── profitability.md       # Profitability metrics
+│   ├── revenue.md             # 收入分析公式
+│   ├── costs.md               # 成本分析公式
+│   └── profitability.md       # 盈利能力指标
 ├── templates/
-│   └── analysis_report.md     # Report template
+│   └── analysis_report.md     # 报告模板
 └── scripts/
-    └── calculate_ratios.py    # Calculation script
+    └── calculate_ratios.py    # 计算脚本
 ```
 
-## Progressive Loading
+## 渐进式加载
 
-| User Request | Files Loaded | Tokens |
+| 用户请求 | 加载的文件 | Token 数量 |
 |--------------|--------------|--------|
-| "What's gross margin?" | SKILL.md + profitability.md | ~1500 |
-| "Analyze revenue growth" | SKILL.md + revenue.md | ~1400 |
-| "Full financial analysis" | All files | ~4000 |
+| "什么是毛利率？" | SKILL.md + profitability.md | ~1500 |
+| "分析收入增长" | SKILL.md + revenue.md | ~1400 |
+| "完整财务分析" | 所有文件 | ~4000 |
 
-## Usage
+## 使用场景
 
-This skill is triggered when users ask about:
-- Revenue, sales, growth rates
-- Costs, expenses, efficiency
-- Profits, margins, ROI
-- Financial analysis or reports
+当用户询问以下内容时触发此技能：
+- 收入、销售、增长率
+- 成本、费用、效率
+- 利润、利润率、投资回报率
+- 财务分析或报告
 
-## Script Usage
+## 脚本使用
 
 ```bash
-# Create a data file
+# 创建数据文件
 echo '{"revenue": 1000000, "cogs": 400000, "net_income": 150000}' > data.json
 
-# Run calculations
+# 运行计算
 python scripts/calculate_ratios.py data.json
 ```

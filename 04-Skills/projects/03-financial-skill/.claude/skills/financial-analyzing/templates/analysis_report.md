@@ -1,51 +1,51 @@
-# Financial Analysis Report Template
+# 财务分析报告模板
 
-## Executive Summary
-[One paragraph summarizing key findings and recommendations]
+## 执行摘要
+[用一段话总结主要发现和建议]
 
-## Company/Project Overview
-- **Name**: [Entity name]
-- **Period Analyzed**: [Date range]
-- **Data Sources**: [Where data came from]
+## 公司/项目概况
+- **名称**：[实体名称]
+- **分析期间**：[日期范围]
+- **数据来源**：[数据来源]
 
-## Key Metrics
+## 关键指标
 
-| Metric | Value | Industry Avg | Assessment |
+| 指标 | 数值 | 行业平均 | 评估 |
 |--------|-------|--------------|------------|
-| Revenue Growth | X% | Y% | Above/Below |
-| Gross Margin | X% | Y% | Above/Below |
-| Net Margin | X% | Y% | Above/Below |
-| ROI | X% | Y% | Above/Below |
+| 收入增长率 | X% | Y% | 高于/低于 |
+| 毛利率 | X% | Y% | 高于/低于 |
+| 净利率 | X% | Y% | 高于/低于 |
+| 投资回报率 | X% | Y% | 高于/低于 |
 
-## Detailed Analysis
+## 详细分析
 
-### Revenue Analysis
-[Findings about revenue trends, composition, growth]
+### 收入分析
+[关于收入趋势、结构、增长的发现]
 
-### Cost Analysis
-[Findings about cost structure, efficiency]
+### 成本分析
+[关于成本结构、效率的发现]
 
-### Profitability Analysis
-[Findings about margins, returns]
+### 盈利能力分析
+[关于利润率、回报率的发现]
 
-## Trend Analysis
-[How metrics have changed over time]
+## 趋势分析
+[指标随时间的变化情况]
 
-## Recommendations
+## 建议
 
-### Immediate Actions
-1. [High priority recommendation]
-2. [High priority recommendation]
+### 立即行动
+1. [高优先级建议]
+2. [高优先级建议]
 
-### Medium-term Improvements
-1. [Medium priority recommendation]
+### 中期改进
+1. [中优先级建议]
 
-### Long-term Strategy
-1. [Strategic recommendation]
+### 长期战略
+1. [战略建议]
 
-## Risk Factors
-- [Key risk 1]
-- [Key risk 2]
+## 风险因素
+- [关键风险 1]
+- [关键风险 2]
 
-## Appendix
-[Supporting calculations, data tables, charts]
+## 附录
+[支持性计算、数据表格、图表]

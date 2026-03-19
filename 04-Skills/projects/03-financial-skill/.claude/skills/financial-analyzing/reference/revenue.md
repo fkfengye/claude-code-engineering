@@ -1,55 +1,55 @@
-# Revenue Analysis Reference
+# 收入分析参考
 
-## Key Metrics
+## 关键指标
 
-### Revenue Growth Rate
+### 收入增长率
 ```
-Revenue Growth Rate = (Current Period Revenue - Previous Period Revenue) / Previous Period Revenue × 100%
-```
-
-**Interpretation:**
-- > 20%: High growth
-- 10-20%: Moderate growth
-- < 10%: Low growth
-- < 0%: Declining
-
-### Year-over-Year (YoY) Growth
-```
-YoY Growth = (This Year Revenue - Last Year Revenue) / Last Year Revenue × 100%
+收入增长率 = (本期收入 - 上期收入) / 上期收入 × 100%
 ```
 
-### Quarter-over-Quarter (QoQ) Growth
+**解读：**
+- > 20%：高增长
+- 10-20%：中速增长
+- < 10%：低速增长
+- < 0%：下降
+
+### 同比增长率 (YoY)
 ```
-QoQ Growth = (This Quarter - Previous Quarter) / Previous Quarter × 100%
+YoY 增长 = (今年收入 - 去年收入) / 去年收入 × 100%
 ```
 
-## Revenue Composition Analysis
-
-### Revenue by Product/Service
+### 环比增长率 (QoQ)
 ```
-Product Revenue Share = Product Revenue / Total Revenue × 100%
+QoQ 增长 = (本季度 - 上季度) / 上季度 × 100%
 ```
 
-### Revenue by Region
+## 收入结构分析
+
+### 按产品/服务分类的收入
 ```
-Regional Revenue Share = Regional Revenue / Total Revenue × 100%
+产品收入占比 = 产品收入 / 总收入 × 100%
 ```
 
-## Average Revenue Metrics
-
-### Average Revenue Per User (ARPU)
+### 按地区分类的收入
 ```
-ARPU = Total Revenue / Number of Users
+地区收入占比 = 地区收入 / 总收入 × 100%
 ```
 
-### Average Revenue Per Account (ARPA)
+## 平均收入指标
+
+### 每用户平均收入 (ARPU)
 ```
-ARPA = Total Revenue / Number of Accounts
+ARPU = 总收入 / 用户数
 ```
 
-## Red Flags to Watch
+### 每账户平均收入 (ARPA)
+```
+ARPA = 总收入 / 账户数
+```
 
-1. **Revenue concentration** > 30% from single customer
-2. **Declining growth rate** over 3+ consecutive quarters
-3. **Large discrepancy** between booked and recognized revenue
-4. **Unusual seasonality** patterns
+## 需要关注的警示信号
+
+1. **收入集中度** - 单个客户占比超过 30%
+2. **增长率下降** - 连续 3 个以上季度下降
+3. **确认收入与开票收入差异大**
+4. **异常季节性模式**
