@@ -1,34 +1,34 @@
 ---
-description: Show recent git history with summary
-argument-hint: [optional: number of commits, default 5]
+description: 显示最近的 git 提交历史及摘要
+argument-hint: [可选：提交数量，默认 5]
 allowed-tools: Bash(git:*)
 model: haiku
 ---
 
-Show recent git commit history.
+显示最近的 git 提交历史。
 
-Number of commits: $ARGUMENTS (default: 5 if not specified)
+提交数量：$ARGUMENTS（未指定时默认为 5）
 
-## Steps
+## 步骤
 
-1. Run `git log --oneline -n [count]`
-2. Provide a brief summary
+1. 执行 `git log --oneline -n [数量]`
+2. 提供简短摘要
 
-## Output Format
+## 输出格式
 
 ```
-## Recent Commits
+## 最近的提交
 
-| Hash | Message | Author | Time |
+| Hash | 消息 | 作者 | 时间 |
 |------|---------|--------|------|
-| abc123 | feat: add login | John | 2h ago |
-| def456 | fix: null check | Jane | 5h ago |
+| abc123 | feat: add login | John | 2小时前 |
+| def456 | fix: null check | Jane | 5小时前 |
 ...
 
-### Summary
-- Total: [n] commits shown
-- Most active: [most frequent commit type]
-- Recent focus: [what recent work seems to be about]
+### 摘要
+- 总计：显示 [n] 条提交
+- 最活跃的：[出现频率最高的提交类型]
+- 最近的重点：[最近工作的主要内容]
 ```
 
-Keep it concise and scannable.
+保持简洁和易浏览。
