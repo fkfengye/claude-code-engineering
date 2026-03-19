@@ -1,27 +1,27 @@
 ---
 name: api-conventions
-description: API design patterns and conventions for this project. Covers RESTful URL naming, response format standards, error handling, and authentication requirements. Use when writing or reviewing API endpoints, designing new APIs, or making decisions about request/response formats.
+description: 本项目的API设计模式与规范。涵盖RESTful URL命名规范、响应格式标准、错误处理和认证要求。适用于编写或审查API端点、设计新API、以及制定请求/响应格式决策。
 allowed-tools:
   - Read
   - Grep
   - Glob
 ---
 
-# API Design Conventions
+# API 设计规范
 
-These are the API design standards for our project. Apply these conventions whenever working with API endpoints.
+本文档定义了本项目的API设计标准。在处理API端点时，请遵循这些规范。
 
-## URL Naming
+## URL 命名
 
-- Use plural nouns for resources: `/users`, `/orders`, `/products`
-- Use kebab-case for multi-word resources: `/order-items`, `/user-profiles`
-- Nested resources for belongsTo relationships: `/users/{id}/orders`
-- Maximum two levels of nesting; beyond that, use query parameters
-- Use query parameters for filtering: `/orders?status=active&limit=20`
+- 资源使用复数名词：`/users`、`/orders`、`/products`
+- 多单词资源使用 kebab-case：`/order-items`、`/user-profiles`
+- belongsTo 关系使用嵌套资源：`/users/{id}/orders`
+- 嵌套层级最多两级；超过两级应使用查询参数
+- 筛选使用查询参数：`/orders?status=active&limit=20`
 
-## Response Format
+## 响应格式
 
-All API responses must follow this structure:
+所有API响应必须遵循以下结构：
 
 ```json
 {
@@ -35,28 +35,28 @@ All API responses must follow this structure:
 }
 ```
 
-- `data`: 成功时返回的业务数据
-- `error`: 错误时返回错误对象 `{ code, message, details }`，成功时为 `null`
-- `meta`: 分页和元信息，列表接口必须返回
+- `data`：成功时返回的业务数据
+- `error`：错误时返回错误对象 `{ code, message, details }`，成功时为 `null`
+- `meta`：分页和元信息，列表接口必须返回
 
-## HTTP Status Codes
+## HTTP 状态码
 
-- 200: 成功返回数据
-- 201: 成功创建资源
-- 400: 请求参数错误
-- 401: 未认证
-- 403: 无权限
-- 404: 资源不存在
-- 422: 业务逻辑错误
-- 500: 服务器内部错误
+- 200：成功返回数据
+- 201：成功创建资源
+- 400：请求参数错误
+- 401：未认证
+- 403：无权限
+- 404：资源不存在
+- 422：业务逻辑错误
+- 500：服务器内部错误
 
-## Authentication
+## 认证
 
-- All endpoints require Bearer token unless explicitly marked as public
-- Public endpoints must be documented with `@public` annotation
-- Token format: `Authorization: Bearer <jwt-token>`
+- 所有端点都需要Bearer令牌，除非明确标记为公开
+- 公开端点必须使用 `@public` 注解标注
+- 令牌格式：`Authorization: Bearer <jwt-token>`
 
-## Versioning
+## 版本控制
 
-- API version in URL path: `/api/v1/users`
-- Breaking changes require new version
+- API版本放在URL路径中：`/api/v1/users`
+- 破坏性变更需要发布新版本
