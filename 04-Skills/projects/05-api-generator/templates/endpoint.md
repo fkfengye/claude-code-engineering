@@ -1,23 +1,23 @@
-# Endpoint Documentation Template
+# 端点文档模板
 
-Use this template for each API endpoint:
+为每个 API 端点使用此模板：
 
 ```markdown
 ## {METHOD} {PATH}
 
-{Brief description of what this endpoint does.}
+{简要描述此端点的功能。}
 
-### Authentication
-{Required | Optional | None}
+### 认证
+{必需 | 可选 | 无}
 
-### Parameters
+### 参数
 
-| Name | Location | Type | Required | Description |
-|------|----------|------|----------|-------------|
+| 名称 | 位置 | 类型 | 必填 | 描述 |
+|------|------|------|------|------|
 | {name} | {path/query/header/body} | {type} | {Yes/No} | {description} |
 
-### Request Body
-{If applicable}
+### 请求体
+{如果适用}
 
 ```json
 {
@@ -25,10 +25,10 @@ Use this template for each API endpoint:
 }
 ```
 
-### Responses
+### 响应
 
-#### {Status Code} {Status Text}
-{Description of when this response occurs}
+#### {状态码} {状态文本}
+{描述何时会发生此响应}
 
 ```json
 {
@@ -36,22 +36,22 @@ Use this template for each API endpoint:
 }
 ```
 
-### Example
+### 示例
 
-**Request**:
+**请求**:
 ```bash
 curl -X {METHOD} '{BASE_URL}{PATH}' \
   -H 'Content-Type: application/json' \
   -d '{request_body}'
 ```
 
-**Response**:
+**响应**:
 ```json
 {
   "example": "response"
 }
 ```
 
-### Notes
-{Any additional information, caveats, or related endpoints}
+### 备注
+{任何附加信息、注意事项或相关端点}
 ```

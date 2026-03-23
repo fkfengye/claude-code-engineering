@@ -1,87 +1,87 @@
-# API Documentation Patterns
+# API 文档模式
 
-## Common Frameworks
+## 常见框架
 
 ### Express.js
 ```javascript
-// Route pattern
+// 路由模式
 app.get('/users/:id', handler)
 router.post('/auth/login', authController.login)
 
-// Look for:
-// - app.get(), app.post(), etc.
+// 查找：
+// - app.get(), app.post() 等
 // - router.METHOD()
-// - @route decorators (if using decorators)
+// - @route 装饰器（如果使用装饰器）
 ```
 
 ### FastAPI (Python)
 ```python
-# Route pattern
+# 路由模式
 @app.get("/users/{user_id}")
 @router.post("/auth/login")
 
-# Look for:
-# - @app.METHOD decorators
-# - @router.METHOD decorators
-# - Pydantic models for schemas
+# 查找：
+# - @app.METHOD 装饰器
+# - @router.METHOD 装饰器
+# - Pydantic 模型用于模式
 ```
 
 ### Spring Boot (Java)
 ```java
-// Route pattern
+// 路由模式
 @GetMapping("/users/{id}")
 @PostMapping("/auth/login")
 @RequestMapping(value = "/api", method = RequestMethod.GET)
 
-// Look for:
-// - @XXXMapping annotations
+// 查找：
+// - @XXXMapping 注解
 // - @RequestMapping
-// - @RestController classes
+// - @RestController 类
 ```
 
 ### Go (Gin/Echo)
 ```go
-// Route pattern
+// 路由模式
 r.GET("/users/:id", handler)
 e.POST("/auth/login", controller.Login)
 
-// Look for:
-// - router.METHOD() calls
-// - Group definitions
-// - Middleware attachments
+// 查找：
+// - router.METHOD() 调用
+// - 组定义
+// - 中间件附件
 ```
 
-## Parameter Detection
+## 参数检测
 
-### Path Parameters
+### 路径参数
 - Express: `:paramName`
 - FastAPI: `{param_name}`
 - Spring: `{paramName}`
-- Go: `:paramName` or `*paramName`
+- Go: `:paramName` 或 `*paramName`
 
-### Query Parameters
-Look for:
+### 查询参数
+查找：
 - `req.query` (Express)
 - `Query()` (FastAPI)
 - `@RequestParam` (Spring)
 - `c.Query()` (Gin)
 
-### Body Parameters
-Look for:
+### 正文参数
+查找：
 - `req.body` (Express)
-- Pydantic models (FastAPI)
+- Pydantic 模型 (FastAPI)
 - `@RequestBody` (Spring)
 - `c.Bind()` (Gin)
 
-## Response Detection
+## 响应检测
 
-### Status Codes
-- Look for explicit status codes: `res.status(201)`, `status_code=201`
-- Default is usually 200
-- Error handlers indicate error codes
+### 状态码
+- 查找显式状态码：`res.status(201)`, `status_code=201`
+- 默认通常是 200
+- 错误处理器表示错误码
 
-### Response Schema
-- TypeScript interfaces/types
-- Pydantic models
-- Java DTOs
-- Go structs with json tags
+### 响应模式
+- TypeScript 接口/类型
+- Pydantic 模型
+- Java DTO
+- 带 json 标签的 Go 结构体

@@ -1,67 +1,67 @@
-# Documentation Standards
+# 文档标准
 
-## General Principles
+## 通用原则
 
-1. **Clarity**: Documentation should be clear and unambiguous
-2. **Completeness**: Include all necessary information
-3. **Consistency**: Follow the same format throughout
-4. **Currency**: Keep documentation up to date
+1. **清晰性**：文档应该清晰明确
+2. **完整性**：包含所有必要信息
+3. **一致性**：自始至终遵循相同格式
+4. **时效性**：保持文档最新
 
-## Endpoint Documentation
+## 端点文档
 
-Each endpoint should document:
+每个端点应记录：
 
-### Required Fields
-- **Method**: HTTP method (GET, POST, PUT, DELETE, PATCH)
-- **Path**: Full endpoint path including base URL
-- **Description**: What the endpoint does
-- **Parameters**: All input parameters
-- **Response**: Expected response format
+### 必填字段
+- **方法**：HTTP 方法（GET, POST, PUT, DELETE, PATCH）
+- **路径**：完整端点路径包括基础 URL
+- **描述**：端点的功能
+- **参数**：所有输入参数
+- **响应**：预期的响应格式
 
-### Optional Fields
-- **Authentication**: Required auth method
-- **Rate Limiting**: Any rate limits
-- **Deprecation**: If endpoint is deprecated
-- **Examples**: Request/response examples
+### 可选字段
+- **认证**：所需的认证方法
+- **速率限制**：任何速率限制
+- **弃用**：如果端点已弃用
+- **示例**：请求/响应示例
 
-## Parameter Documentation
+## 参数文档
 
-For each parameter, include:
+对于每个参数，包括：
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| name | Yes | Parameter name |
-| location | Yes | path, query, header, body |
-| type | Yes | Data type |
-| required | Yes | true/false |
-| description | Yes | What it's for |
-| default | No | Default value if optional |
-| constraints | No | Validation rules |
+| 字段 | 必填 | 描述 |
+|-------|------|------|
+| name | 是 | 参数名称 |
+| location | 是 | path, query, header, body |
+| type | 是 | 数据类型 |
+| required | 是 | true/false |
+| description | 是 | 用途 |
+| default | 否 | 如果可选的默认值 |
+| constraints | 否 | 验证规则 |
 
-## Response Documentation
+## 响应文档
 
-### Success Response
+### 成功响应
 ```markdown
-**Status Code**: 200 OK
+**状态码**: 200 OK
 
-**Response Body**:
-| Field | Type | Description |
-|-------|------|-------------|
-| id | string | Unique identifier |
+**响应体**:
+| 字段 | 类型 | 描述 |
+|------|------|------|
+| id | string | 唯一标识符 |
 | ... | ... | ... |
 ```
 
-### Error Responses
-Document common error cases:
+### 错误响应
+记录常见错误情况：
 - 400 Bad Request
 - 401 Unauthorized
 - 403 Forbidden
 - 404 Not Found
 - 500 Internal Server Error
 
-## Writing Style
+## 写作风格
 
-- Use present tense: "Returns a list" not "Will return a list"
-- Be direct: "Gets user by ID" not "This endpoint is used to get a user by their ID"
-- Use consistent terminology
-- Avoid jargon unless well-defined
+- 使用现在时："Returns a list" 而不是 "Will return a list"
+- 直接表达："Gets user by ID" 而不是 "This endpoint is used to get a user by their ID"
+- 使用一致的术语
+- 除非有明确解释，否则避免使用术语

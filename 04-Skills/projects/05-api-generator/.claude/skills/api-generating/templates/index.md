@@ -1,55 +1,55 @@
-# API Index Template
+# API 索引模板
 
-Use this template for the API overview page:
+为 API 概述页面使用此模板：
 
 ```markdown
-# {API_NAME} API Reference
+# {API_NAME} API 参考
 
-{Brief description of the API and its purpose.}
+{简要描述 API 及其用途。}
 
-## Base URL
+## 基础 URL
 
 ```
 {BASE_URL}
 ```
 
-## Authentication
+## 认证
 
-{Description of authentication method}
+{认证方法描述}
 
-## Endpoints Overview
+## 端点概览
 
-| Method | Path | Description |
-|--------|------|-------------|
-| {METHOD} | {PATH} | {BRIEF_DESC} |
+| 方法 | 路径 | 描述 |
+|------|------|------|
+| {METHOD} | {PATH} | {简要描述} |
 
-## Endpoints
+## 端点
 
-### {CATEGORY_1}
+### {分类_1}
 
-- [{METHOD} {PATH}](#{anchor}) - {Brief description}
+- [{METHOD} {PATH}](#{anchor}) - {简要描述}
 
-### {CATEGORY_2}
+### {分类_2}
 
-- [{METHOD} {PATH}](#{anchor}) - {Brief description}
+- [{METHOD} {PATH}](#{anchor}) - {简要描述}
 
-## Common Response Codes
+## 常见响应码
 
-| Code | Description |
-|------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 400 | Bad Request |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Not Found |
-| 500 | Internal Server Error |
+| 码 | 描述 |
+|------|------|
+| 200 | 成功 |
+| 201 | 已创建 |
+| 400 | 错误请求 |
+| 401 | 未授权 |
+| 403 | 禁止 |
+| 404 | 未找到 |
+| 500 | 服务器内部错误 |
 
-## Rate Limiting
+## 速率限制
 
-{Rate limiting information if applicable}
+{如果适用，速率限制信息}
 
-## Versioning
+## 版本控制
 
-{API versioning information if applicable}
+{如果适用，API 版本控制信息}
 ```

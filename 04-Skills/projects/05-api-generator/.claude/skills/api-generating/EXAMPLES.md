@@ -1,8 +1,8 @@
-# API Documentation Examples
+# API 文档示例
 
-## Example 1: Simple Express.js Endpoint
+## 示例 1: 简单的 Express.js 端点
 
-### Input Code
+### 输入代码
 ```javascript
 // routes/users.js
 router.get('/users/:id', async (req, res) => {
@@ -15,22 +15,22 @@ router.get('/users/:id', async (req, res) => {
 });
 ```
 
-### Generated Documentation
+### 生成的文档
 ```markdown
 ## GET /users/:id
 
-Retrieve a user by their unique identifier.
+通过唯一标识符检索用户。
 
-### Parameters
+### 参数
 
-| Name | Location | Type | Required | Description |
-|------|----------|------|----------|-------------|
-| id | path | string | Yes | The unique identifier of the user |
+| 名称 | 位置 | 类型 | 必填 | 描述 |
+|------|------|------|------|------|
+| id | path | string | Yes | 用户的唯一标识符 |
 
-### Responses
+### 响应
 
 #### 200 OK
-Returns the user object.
+返回用户对象。
 
 ```json
 {
@@ -42,7 +42,7 @@ Returns the user object.
 ```
 
 #### 404 Not Found
-User with specified ID does not exist.
+指定 ID 的用户不存在。
 
 ```json
 {
@@ -53,9 +53,9 @@ User with specified ID does not exist.
 
 ---
 
-## Example 2: FastAPI with Pydantic
+## 示例 2: 带 Pydantic 的 FastAPI
 
-### Input Code
+### 输入代码
 ```python
 from pydantic import BaseModel
 from fastapi import FastAPI, HTTPException
@@ -72,26 +72,26 @@ class UserResponse(BaseModel):
 
 @app.post("/users", response_model=UserResponse, status_code=201)
 async def create_user(user: UserCreate):
-    """Create a new user account."""
-    # ... implementation
+    """创建新用户账户。"""
+    # ... 实现
     return new_user
 ```
 
-### Generated Documentation
+### 生成的文档
 ```markdown
 ## POST /users
 
-Create a new user account.
+创建新用户账户。
 
-### Request Body
+### 请求体
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| name | string | Yes | User's display name |
-| email | string | Yes | User's email address |
-| password | string | Yes | User's password |
+| 字段 | 类型 | 必填 | 描述 |
+|------|------|------|------|
+| name | string | Yes | 用户的显示名称 |
+| email | string | Yes | 用户的电子邮件地址 |
+| password | string | Yes | 用户的密码 |
 
-**Example**:
+**示例**:
 ```json
 {
   "name": "Jane Smith",
@@ -100,10 +100,10 @@ Create a new user account.
 }
 ```
 
-### Responses
+### 响应
 
 #### 201 Created
-User successfully created.
+用户创建成功。
 
 ```json
 {
@@ -116,9 +116,9 @@ User successfully created.
 
 ---
 
-## Example 3: OpenAPI Spec Output
+## 示例 3: OpenAPI 规范输出
 
-### Generated OpenAPI YAML
+### 生成的 OpenAPI YAML
 ```yaml
 openapi: 3.0.0
 info:

@@ -10,57 +10,57 @@ allowed-tools:
   - Bash(./scripts/*:*)
 ---
 
-# API Documentation Generator
+# API 文档生成器
 
-Generate comprehensive API documentation from source code.
+从源代码生成全面的 API 文档。
 
-## Quick Reference
+## 快速参考
 
-| Task | Resource |
-|------|----------|
-| Identify framework | See `PATTERNS.md` |
-| Documentation standards | See `STANDARDS.md` |
-| Example outputs | See `EXAMPLES.md` |
+| 任务 | 资源 |
+|------|------|
+| 识别框架 | 参见 `PATTERNS.md` |
+| 文档标准 | 参见 `STANDARDS.md` |
+| 输出示例 | 参见 `EXAMPLES.md` |
 
-## Process
+## 流程
 
-### Step 1: Identify API Endpoints
+### 步骤 1: 识别 API 端点
 
-Look for route definitions. For framework-specific patterns, see `PATTERNS.md`.
+查找路由定义。关于框架特定的模式，参见 `PATTERNS.md`。
 
-### Step 2: Extract Information
+### 步骤 2: 提取信息
 
-For each endpoint, extract:
-- HTTP method (GET, POST, PUT, DELETE, etc.)
-- Path/route
-- Parameters (path, query, body)
-- Request/response schemas
-- Authentication requirements
+对于每个端点，提取：
+- HTTP 方法（GET, POST, PUT, DELETE 等）
+- 路径/路由
+- 参数（路径、查询、正文）
+- 请求/响应模式
+- 认证要求
 
-### Step 3: Generate Documentation
+### 步骤 3: 生成文档
 
-Use the template in `templates/endpoint.md` for each endpoint.
+为每个端点使用 `templates/endpoint.md` 中的模板。
 
-### Step 4: Create Overview
+### 步骤 4: 创建概述
 
-Generate an index using `templates/index.md`.
+使用 `templates/index.md` 生成索引。
 
-## Output Formats
+## 输出格式
 
-### Markdown (Default)
-Generate markdown suitable for README or docs site.
+### Markdown（默认）
+生成适合 README 或文档站点的 markdown。
 
 ### OpenAPI/Swagger
-If requested, generate OpenAPI 3.0 spec. See `templates/openapi.yaml`.
+如果需要，生成 OpenAPI 3.0 规范。参见 `templates/openapi.yaml`。
 
-## Automation
+## 自动化
 
-To auto-detect routes:
+自动检测路由：
 ```bash
 python scripts/detect_routes.py <source_directory>
 ```
 
-To validate OpenAPI spec:
+验证 OpenAPI 规范：
 ```bash
 ./scripts/validate_openapi.sh <spec_file>
 ```

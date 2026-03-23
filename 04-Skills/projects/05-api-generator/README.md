@@ -1,85 +1,85 @@
-# API Documentation Generator Skill
+# API 文档生成器 Skill
 
-A production-ready skill for generating API documentation from source code.
+一个可用于生产的从源代码生成 API 文档的 skill。
 
-## Features
+## 功能特性
 
-- **Multi-framework support**: Express.js, FastAPI, Spring Boot, Go (Gin/Echo)
-- **Multiple output formats**: Markdown, OpenAPI 3.0
-- **Automated route detection**: Python script for batch processing
-- **Validation tools**: OpenAPI spec validation
+- **多框架支持**：Express.js, FastAPI, Spring Boot, Go (Gin/Echo)
+- **多种输出格式**：Markdown, OpenAPI 3.0
+- **自动化路由检测**：用于批量处理的 Python 脚本
+- **验证工具**：OpenAPI 规范验证
 
-## Structure
+## 项目结构
 
 ```
 04-api-generator/
-├── SKILL.md                    # Main skill file
-├── PATTERNS.md                 # Framework detection patterns
-├── STANDARDS.md                # Documentation standards
-├── EXAMPLES.md                 # Input/output examples
+├── SKILL.md                    # 主 skill 文件
+├── PATTERNS.md                 # 框架检测模式
+├── STANDARDS.md                # 文档标准
+├── EXAMPLES.md                 # 输入/输出示例
 ├── templates/
-│   ├── index.md               # API index template
-│   ├── endpoint.md            # Endpoint documentation template
-│   └── openapi.yaml           # OpenAPI spec template
+│   ├── index.md               # API 索引模板
+│   ├── endpoint.md            # 端点文档模板
+│   └── openapi.yaml           # OpenAPI 规范模板
 └── scripts/
-    ├── detect_routes.py       # Route detection script
-    └── validate_openapi.sh    # OpenAPI validation script
+    ├── detect_routes.py       # 路由检测脚本
+    └── validate_openapi.sh    # OpenAPI 验证脚本
 ```
 
-## Usage Examples
+## 使用示例
 
-### Single Endpoint Documentation
+### 单个端点文档
 
-Ask Claude to document a specific endpoint:
+让 Claude 记录特定端点：
 ```
-Please document this Express route:
+请记录这个 Express 路由：
 router.get('/users/:id', userController.getUser);
 ```
 
-### Batch Documentation
+### 批量文档
 
-Scan an entire directory:
+扫描整个目录：
 ```
-Scan the src/routes directory and generate API documentation for all endpoints.
-```
-
-### OpenAPI Generation
-
-Generate an OpenAPI specification:
-```
-Generate an OpenAPI 3.0 spec for the API defined in src/api.
+扫描 src/routes 目录并为所有端点生成 API 文档。
 ```
 
-## Scripts
+### OpenAPI 生成
 
-### Route Detection
+生成 OpenAPI 规范：
+```
+为 src/api 中定义的 API 生成 OpenAPI 3.0 规范。
+```
+
+## 脚本
+
+### 路由检测
 
 ```bash
-# Detect all routes
+# 检测所有路由
 python scripts/detect_routes.py src/
 
-# Detect Express routes only
+# 仅检测 Express 路由
 python scripts/detect_routes.py src/ --framework express
 
-# Save to file
+# 保存到文件
 python scripts/detect_routes.py src/ -o routes.json
 ```
 
-### OpenAPI Validation
+### OpenAPI 验证
 
 ```bash
-# Validate an OpenAPI spec
+# 验证 OpenAPI 规范
 ./scripts/validate_openapi.sh api-spec.yaml
 ```
 
-## allowed-tools Configuration
+## allowed-tools 配置
 
-This skill uses:
-- `Read` - Read source files
-- `Grep` - Search for route patterns
-- `Glob` - Find files
-- `Write` - Create documentation files
-- `Bash(python:*)` - Run Python scripts
-- `Bash(./scripts/*:*)` - Run project scripts
+此 skill 使用：
+- `Read` - 读取源文件
+- `Grep` - 搜索路由模式
+- `Glob` - 查找文件
+- `Write` - 创建文档文件
+- `Bash(python:*)` - 运行 Python 脚本
+- `Bash(./scripts/*:*)` - 运行项目脚本
 
-No `Edit` permission - this skill creates new files but doesn't modify existing ones.
+无 `Edit` 权限 - 此 skill 创建新文件但不修改现有文件。
