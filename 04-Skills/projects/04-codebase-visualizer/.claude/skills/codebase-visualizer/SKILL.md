@@ -5,10 +5,10 @@ allowed-tools:
   - Bash(python *)
 ---
 
-Run the visualization script from your project root:
+从项目根目录运行可视化脚本：
 
 ```bash
 python .claude/skills/codebase-visualizer/scripts/visualize.py .
 ```
 
-This creates `codebase-map.html` and opens it in your default browser.
+这会创建 `codebase-map.html` 并在默认浏览器中打开它。
